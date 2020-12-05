@@ -1,0 +1,27 @@
+﻿@model DellMT.ViewModels.CourseFormViewModel
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Title</h2>
+
+@using (Html.BeginForm("Save", "Courses"))
+{
+    <div class="form-group">
+        @Html.LabelFor(c => c.Course.CourseName)
+        @Html.TextBoxFor(c => c.Course.CourseName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Course.CourseDescription)
+        @Html.TextBoxFor(c => c.Course.CourseDescription, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Course.TutorName)
+        @Html.TextBoxFor(c => c.Course.TutorName, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Course.CourseRating)
+        @Html.TextBoxFor(c => c.Course.CourseRating, new { @class = "form-control" })
+    </div>
+}

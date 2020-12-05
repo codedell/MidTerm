@@ -1,0 +1,14 @@
+﻿@model DellMT.Models.Course
+@{
+    ViewBag.Title = Model.CourseName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.CourseName</h2>
+<ul>
+    <li>Course Id: @Model.Id</li>
+    <li>Course Description: @Model.CourseDescription</li>
+    <li>Tutor Name: @Model.TutorName</li>
+    <li>Course Rating: @Model.CourseRating</li>
+</ul>
+

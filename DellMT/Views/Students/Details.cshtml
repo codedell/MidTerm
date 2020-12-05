@@ -1,0 +1,16 @@
+﻿@model DellMT.Models.Student
+@{
+    ViewBag.Title = Model.LastName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.FirstName @Model.LastName</h2>
+<ul>
+    <li>Student ID: @Model.Id</li>
+    <li>Birthdate: @Model.Birthdate</li>
+    <li>Course ID @Model.CourseId</li>
+    <li>Course Status: @Model.CourseStatus</li>
+    <li>Grade: @Model.Grade</li>
+    <li>Enrolled Date: @Model.EnrolledDate</li>
+</ul>
+
